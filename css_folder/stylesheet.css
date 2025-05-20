@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-container{
+  margin-bottom: 20px;
+}
+
+.navbar-general{
+  display: flex;
+  align-content: center;
+
+  font-size: 20px;
+}
+
+.navbar-a{
+  flex: 1;
+  background-color: #0f1056;
+
+  padding: 20px;
+
+  font-weight: 900;
+}
+
+.navbar-b a:hover, .navbar-b a.active:hover, .nav-icon:hover, .responsive-navbar a:hover, .responsive-navbar a.active:hover, .pay-button:hover{
+  background-color: #ddd;
+}
+
+.navbar-b a.active, .responsive-navbar a.active, .nav-icon.active{
+  background-color: steelblue;
+}
+
+
+.navbar-b{
+  display: flex;
+  gap: 20px;
+  background-color: #0f1056;
+
+  padding: 20px;
+}
+
+.responsive-navbar{
+  background-color: 	#113065;
+}
+
+.responsive-navbar a{
+  float: none;
+  display: none;
+  text-align: left;
+
+  font-size: 20px;
+  padding: 10px;
+}
+
+
+.navbar-c{
+  flex: 1;
+  background-color: #0f1056;
+}
+
+.nav-icon{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+
+.menu-icon{
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px;
+}
+
+@media (max-width: 1000px){
+  .navbar-b{
+    display: none;
+  }
+  .responsive-navbar.show a{
+    display: block;
+  }
+
+  .nav-icon{
+    display: block;
+  }
+
+}
+
+
+/* INDEX PAGE*/
+.container{
+  margin: auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1000px){
+
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .grid-container{
+      grid-template-columns: 1fr;
+  }
+  .form-control{
+      width: 100%;
+  }
+}
+
+.item{
+  background-color: powderblue;
+  display: flex;
+  max-width: 600px;
+  padding: 15px;
+  margin: auto;
+
+  /*border-radius: 20px;*/
+  border: 1px solid;
+
+  min-height: 270px;
+}
+
+.item-div{
+  padding: 10px;
+  /*position: relative;*/
+  display: flex;
+  flex-direction: column;
+}
+
+.empty{
+  flex-grow: 1;
+}
+
+.pay-button{
+  /*position: absolute;*/
+  padding: 10px;
+  width: calc(100% - 20px);
+  cursor: pointer;
+  bottom: 10px;
+  /*border-radius: 10px;*/
+}
+
+.item img{
+  width: calc(100% / 3);
+  min-width: 150;
+  height: auto;
+  max-height: 250;
+}
+
+
+
+/* PAY PAGE*/
+.card-form{
+  background: powderblue;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  /*border-radius: 20px;*/
+  border: 1px solid;
+}
+
+.card-form h2{
+  text-align: center;
+  color: #333;
+  font-size: 30px;
+}
+
+.card-type{
+  width: calc(100%);
+}
+
+.form-group label{
+  display: block;
+}
+
+.form-group input, .form-group select{
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  /*border-radius: 10px;*/
+}
+
+.form-row {
+  display: flex;
+  gap: 5px;
+}
+
+.form-row .form-group{
+  flex: 1;
+}
+
+.submit-button{
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+  margin-top: 10px;
+  /*border-radius: 10px;*/
+}
+
+.submit-button:hover{
+  background-color: #ddd;
+}
+
+.check{
+  width: 200px;
+}
+
+.success-div{
+  text-align: center;
+}
+
+.success-div button{
+  padding: 10px;
+}
+
+.error-message{
+  text-align: center;
+  color: red;
+  margin-top: 10px;
+}
